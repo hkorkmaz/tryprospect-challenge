@@ -1,0 +1,25 @@
+logging:
+  level: INFO
+  loggers:
+    com.tryprospect: DEBUG
+
+jerseyClient:
+  timeout: 10s
+  connectionTimeout: 10s
+  proxy:
+    host: 'proxy.eu.sony.com'
+    port: 10080
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors: []
+
+database:
+  driverClass: org.postgresql.Driver
+  user: postgres
+  password: postgres
+  url: jdbc:postgresql://localhost:5432/postgres
+
+nlpEnpoint: 'http://interview.tryprospect.co/enrichment/date'
